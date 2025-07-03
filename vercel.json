@@ -1,24 +1,19 @@
 {
   "builds": [
     {
-      "src": "_core/wsgi.py",
+      "src": "my_tennis_club/wsgi.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     },
     {
         "src": "build.sh",
-        "use": "@vercel/static-build",
-        "config": { "distDir": "static_files" }
+        "use": "@vercel/static-build"
     }
   ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
       "src": "/(.*)",
-      "dest": "_core/wsgi.py"
+      "dest": "my_tennis_club/wsgi.py"
     }
   ]
 }
