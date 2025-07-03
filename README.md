@@ -1,1 +1,1 @@
-Um comentário qualquer
+Um comentário qualquer.
