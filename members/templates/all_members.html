@@ -11,9 +11,18 @@
 
   <h1>Members</h1>
   
-  <ul>
+  <table class="table table-striped ">
+    <tr>
+      <th>ID</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+    </tr>
     {% for x in mymembers %}
-      <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+      <tr>
+        <td>{{ x.id }}</td>
+          <td>{{ x.firstname }}</td>
+        <td>{{ x.lastname }}</td>
+      </tr>
     {% endfor %}
-  </ul>
+  </table>
 {% endblock %}
