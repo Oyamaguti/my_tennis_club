@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-7ocvk5an_@_by3ik5_#rgt-dlaq58#*)$4e+6frr_bap$eiekv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.vercel.app']
 
 
 # Application definition
@@ -85,14 +85,6 @@ DATABASES = {
     'PORT': os.getenv("POSTGRES_DB_PORT") if "POSTGRES_DB_PORT" in os.environ.keys() else 5432,
   }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
