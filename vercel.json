@@ -7,10 +7,15 @@
     },
     {
         "src": "build.sh",
-        "use": "@vercel/static-build"
+        "use": "@vercel/static-build",
+        "config": { "distDir": "static_files" }
     }
   ],
   "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "my_tennis_club/wsgi.py"
